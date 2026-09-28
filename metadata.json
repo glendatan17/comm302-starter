@@ -1,0 +1,6 @@
+{
+  "name": "TradingView Markets Overview",
+  "description": "Explore real-time global markets across indices, highest volume stocks, crypto rankings, commodities, futures, and currencies with interactive charts and analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

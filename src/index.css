@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tv-textPrimary: #131722;
+  --color-tv-textSecondary: #787b86;
+  --color-tv-bgLight: #f8f9fd;
+  --color-tv-cardBg: #ffffff;
+  --color-tv-border: #e0e3eb;
+  --color-tv-borderLight: #f0f3fa;
+  --color-tv-pillBg: #f0f3fa;
+  --color-tv-blueActive: #2962ff;
+  --color-tv-upGreen: #089981;
+  --color-tv-downRed: #f23645;
+  --color-tv-badgeRed: #f23645;
+  --color-tv-badgeBlue: #0089ff;
+  --color-tv-badgeCyan: #00bcd4;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  body {
+    color: #131722;
+    background-color: #ffffff;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes priceFlashGreen {
+  0% { background-color: rgba(8, 153, 129, 0.22); }
+  100% { background-color: transparent; }
+}
+
+@keyframes priceFlashRed {
+  0% { background-color: rgba(242, 54, 69, 0.22); }
+  100% { background-color: transparent; }
+}
+
+.flash-up {
+  animation: priceFlashGreen 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flash-down {
+  animation: priceFlashRed 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
